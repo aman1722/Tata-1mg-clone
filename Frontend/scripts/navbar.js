@@ -1,283 +1,496 @@
 function navbar() {
     return `
-    <div class="header">
-    <div class="header_first_row">
-        <div class="header_first_row_first_section">
-            <div class="logo" onclick="window.location.href = 'index.html'"><img class="logo_image" src="./Images/Mainlogo.png"></img></div>
-            <div class="text_inside_first_header_row" onclick="window.location.href = 'index.html'">MEDICINES</div>
-            <div class="text_inside_first_header_row">LAB TESTS</div>
-            <div class="text_inside_first_header_row" onclick="window.location.href = 'AskDoctor.html'">CONSULT DOCTOR</div>
-            <div class="text_inside_first_header_row" onclick="window.location.href = 'covid.html'">COVID-19</div>
-            <div class="text_inside_first_header_row" onclick="window.location.href = 'ayurved.html'">AYURVEDA</div>
-            <div class="text_inside_first_header_row" onclick="window.location.href = 'careplan.html'">CARE PLAN</div>
-        </div>
-        <div class="header_first_row_second_section">
-            <div class="login_signup"><span id="login_button" onclick="window.location.href = 'login.html'">Login</span> | <span id="signup_button" onclick="window.location.href = 'signup.html'" >Sign Up</span></div>
-            <div id="signup_modal" class="modal">
-                <!-- Modal content -->
-                    <div class="modal-content">
-                        <div class="modal_content_inner">
-                            <div class="modal_first_section">
-                                <img src="photos/Health-Related-Queries.png">
-                                <div class="modal_first_section_first_text">Health Related Queries</div>
-                                <div class="modal_first_section_second_text">Consult our certified doctors from anywhere, anytime and for free. We guarantee your privacy.</div>
-                            </div>
-                            <div class="modal_second_section">
-                                <div class="login_close_btn" id="signup_close">&times;</div>
-                                <div class="login_container">
-                                  <div class="login_heading_section">
-                                    <div class="login_first_heading">Sign Up</div>
-                                    <div class="login_second_heading">Please enter your Mobile number to receive One Time Password (OTP)</div>
-                                  </div>
-                                  <div class="input_container">
-                                      <input type="number" class="login_input" id="signup_number_input" placeholder="Enter Mobile Number"/>
-                                  </div>
-                                  <div>
-                                      <button class="login_button">Continue</button>
-                                  </div>
-                                  <div class="login_bottom_content">
-                                      <div class="login_bottom_first_section">
-                                          <span>
-                                              <span class="login_bottom_first_section_first_text">Have an account?</span>
-                                              <span class="login_bottom_first_section_second_text">Login</span>
-                                          </span>
-                                          <span>
-                                              <span class="login_bottom_first_section_first_text">For corporate signup.</span>
-                                              <span class="login_bottom_first_section_second_text">Click Here</span>
-                                          </span>
-                                      </div>
-                                      <div class="login_bottom_second_section">
-                                          <div class="login_bottom_second_section_first_row">
-                                              By logging in, you agree to our 
-                                          </div>
-  
-                                          <div class="login_bottom_second_section_first_row">
-                                              <a>
-                                                  <span class="terms_and_conditions_text">Terms and conditions</span>
-                                              </a>
-                                              &
-                                              <a>
-                                                  <span class="privacy_policy_text">Privacy policy</span>
-                                              </a> 
-                                          </div>
-                                      </div>
-                                      <div class="login_bottom_third_section">
-                                          <span>Need Help? Get In Touch</span>
-                                      </div>
-                                  </div>
-                              </div>
-                            </div>
-                            
-                        </div>
-                      </div>
-              
-              </div> 
-  
-              <div id="login_modal" class="modal">
-  
-                <!-- Modal content -->
-                <div class="modal-content">
-                  <div class="modal_content_inner">
-                      <div class="modal_first_section">
-                          Something
-                      </div>
-                      <div class="modal_second_section">
-                          <div class="login_close_btn" id="login_close">&times;</div>
-                          <div class="login_container">
-                            <div class="login_heading_section">
-                              <div class="login_first_heading">Login</div>
-                              <div class="login_second_heading">Get access to your orders, lab tests & doctor consultants</div>
-                            </div>
-                            <div class="input_container">
-                                <input type="number" class="login_input" placeholder="Enter Mobile Number" id="login_number_input"/>
-                            </div>
-                            <div>
-                                <button class="login_button">LOGIN</button>
-                            </div>
-                            <div class="login_bottom_content">
-                                <div class="login_bottom_first_section">
-                                    <span>
-                                        <span class="login_bottom_first_section_first_text">New on 1mg?</span>
-                                        <span class="login_bottom_first_section_second_text">Sign Up</span>
-                                    </span>
-                                    <span>
-                                        <span class="login_bottom_first_section_first_text">Have a corporate account?</span>
-                                        <span class="login_bottom_first_section_second_text">Click Here</span>
-                                    </span>
-                                </div>
-                                <div class="login_bottom_second_section">
-                                    <div class="login_bottom_second_section_first_row">
-                                        By logging in, you agree to our 
-                                    </div>
-  
-                                    <div class="login_bottom_second_section_first_row">
-                                        <a>
-                                            <span class="terms_and_conditions_text">Terms and conditions</span>
-                                        </a>
-                                        &
-                                        <a>
-                                            <span class="privacy_policy_text">Privacy policy</span>
-                                        </a> 
-                                    </div>
-                                </div>
-                                <div class="login_bottom_third_section">
-                                    <span>Need Help? Get In Touch</span>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                      
+    <header>
+    <!-- Nav Bar Section -->
+      <nav>
+          <div class="outer">
+              <div class="inner1">
+                <div><a href="index.html"><img id="logo" src="./img/Mainlogo.png" alt="Not found"></a></div>
+                 <div>
+                  <ul>
+                      <li><a href="sProductPage.html">Medicines</a></li>
+                      <li><a href="#">Lab Tests</a></li>
+                      <li><a href="doctors.html">Consult Doctors</a></li>
+                      <li><a href="#">COVID-19</a></li>
+                      <li><a href="#">Ayurveda</a></li>
+                      <li><a href="#">Care Plan</a></li>
+                  </ul>
+                 </div>
+              </div>
+              <div class="inner2">
+                  <div>
+                      <p id="login_text_js"><a href="login.html" class="before_login_style">Login</a></p>
+                      <p id="login_text_js1">|</p>
+                      <p id="login_text_js2"><a href="signup.html" class="before_login_style">Signup</a></p>
+                      <P></P>
+                      <P></P>
+                      <p>Offers</p>
                   </div>
-                </div>
-              
-              </div> 
-            <div class="offers" onclick="window.location.href = 'offers.html'">Offers</div>
-            <div class="cart_icon" id="cart_icon" onclick="window.location.href = 'cart.html'"></div>
-            <div class="help" onclick="window.location.href = 'NeedHelp.html'">Need Help?</div>
-        </div>
-    </div>
-    <div class="header_second_row">
-        <div class="header_second_row_first_section"> 
-            <div class="city_list">
-                <div class="navigation_icon-1"><i class="fas fa-map-marker-alt"></i></div>
-                <input type="text" class="cities_input" placeholder="Enter your city"/>
-                <!-- <div class="locator_icon"></div> -->
-            </div>
-            <div class="search_box">
-                
-                <input type="text" class="search_input" placeholder="             Search for Medicines and Health Products" id="search_input" onkeypress="findme()"/>
-                <span class="navigation_icon-2"><i class="fa fa-search"></i></span>
-
-            </div>
-        </div>
-        <div class="header_second_row_second_section">
-            <div class="discount_icon"><img src="https://res.cloudinary.com/du8msdgbj/image/upload/v1570695364/quick_buy_rebrand_lqpnce.svg" /></div>
-            <div class="discount_tag">QUICK BUY! Flat 15% off on medicines*</div>
-            <button class="upload">Quick Order</button>
-            
-            <div>
-                
-            </div>
-        </div>
-    </div>
-    <div class="header_third_row">
-        <div class="drop_down">All Medicines <i class="fa fa-angle-down" aria-hidden="true"></i>
-            <div class="drop_down_content">
-            <ul class="dropdown_first_heading" style="list-style-type:none">Medicine by theropatic class</ul>
-            </div>
-        </div>
-        <div class="drop_down">Winter care <i class="fa fa-angle-down" aria-hidden="true"></i>
-            <div class="drop_down_content">
-            <ul class="dropdown_first_heading" style="list-style-type:none">Body & Skin Care</ul>
-            <ul class="dropdown_first_heading" style="list-style-type:none">Hair & Scalp Care</ul>
-            <ul class="dropdown_first_heading" style="list-style-type:none">Cough & Cold</ul>
-            <ul class="dropdown_first_heading" style="list-style-type:none">Fever & Headache</ul>
-            <ul class="dropdown_first_heading" style="list-style-type:none">Vaporizer & Nebulizer</ul>
-            <ul class="dropdown_first_heading" style="list-style-type:none">Heating Aid</ul>
-            <ul class="dropdown_first_heading" style="list-style-type:none" >Winter Combos</ul>
-            </div>
-        </div>
-        <div class="drop_down">Featured <i class="fa fa-angle-down" aria-hidden="true"></i>
-            <div class="drop_down_content">
-            <ul class="dropdown_first_heading" style="list-style-type:none"> Tata 1mg Health Products</ul>
-            <ul class="dropdown_first_heading" style="list-style-type:none">Trending Products</ul>
-            <ul class="dropdown_first_heading" style="list-style-type:none">Expoler Somethig New</ul>
-            <ul class="dropdown_first_heading" style="list-style-type:none">Buy More, Save More</ul>
-            <ul class="dropdown_first_heading" style="list-style-type:none">Vaccations</ul>
-            <ul class="dropdown_first_heading" style="list-style-type:none">Min 33% Off</ul>
-            <ul class="dropdown_first_heading" style="list-style-type:none">Combos</ul>
-            <ul class="dropdown_first_heading" style="list-style-type:none">Deal Of The Day</ul>
-            <ul class="dropdown_first_heading" style="list-style-type:none">Top Brands
-                <li class="dropdown_second_heading">GOQii</li>
-                <li class="dropdown_second_heading">Organic India</li>
-                <li class="dropdown_second_heading">Accu-check</li>
-                <li class="dropdown_second_heading">Dr. Morepen</li>
-                <li class="dropdown_second_heading">Himalaya Products</li>
-                <li class="dropdown_second_heading">Abbott Nutrition</li>
-            </ul>
-            </div>
-        </div>
-        <div class="drop_down">Covin Essentials <i class="fa fa-angle-down" aria-hidden="true"></i>
-            <div class="drop_down_content">
-            <ul class="dropdown_first_heading" style="list-style-type:none">Boost Your Imunity</ul>
-            <ul class="dropdown_first_heading" style="list-style-type:none">Chyawanprash</ul>
-            <ul class="dropdown_first_heading" style="list-style-type:none">Sanitizer & Hand Wash</ul>
-            <ul class="dropdown_first_heading" style="list-style-type:none">Mask</ul>
-            <ul class="dropdown_first_heading" style="list-style-type:none">Thermometer</ul>
-            </div>
-        </div>
-        <div class="drop_down">Fitness & Supplements <i class="fa fa-angle-down" aria-hidden="true"></i>
-            <div class="drop_down_content">
-                <ul class="dropdown_first_heading" style="list-style-type:none">
-                    Vitamins & Supplements
-                    <li class="dropdown_second_heading" onclick="window.location.href = 'multivitamins.html'">Multivitamins</li>
-                    <li class="dropdown_second_heading" onclick="window.location.href = 'vitamins_A-Z.html'">Vitamins A-Z</li>
-                    <li class="dropdown_second_heading" onclick="window.location.href = 'MineralSupplements.html'">Mineral Supplements</li>
-                    
-                </ul>
-                <ul class="dropdown_first_heading" style="list-style-type:none">
-                     Nutritonal Drinks 
-                    <li class="dropdown_second_heading">Adult Daily Nutrition</li>
-                    <li class="dropdown_second_heading">Kid Nutrition</li>
-                    <li class="dropdown_second_heading">For Women</li>
-                </ul>
-                <ul class="dropdown_first_heading" style="list-style-type:none">
-                    Health food & Drinks
-                    <li class="dropdown_second_heading">Green Tea & Herbal Tea</li>
-                </ul>
-                <ul class="dropdown_first_heading" style="list-style-type:none">
-                    Protien Supplements
-                    <li class="dropdown_second_heading">Whey Protien</li>
-                    <li class="dropdown_second_heading">Amino Acid</li>
-                    <li class="dropdown_second_heading">Mass Gainer</li>
-                    <li class="dropdown_second_heading">Workout Essential</li>
-                    <li class="dropdown_second_heading">Fat Burner</li>
-                </ul>
-                <ul class="dropdown_first_heading">
-                     Omega & Fish oil
-                    <li class="dropdown_second_heading">Fish Oil</li>
-                    <li class="dropdown_second_heading">Cod Liver Oil</li>
-                    <li class="dropdown_second_heading">Flax Seed Oil</li>
-                </ul>
-           
-                <ul class="dropdown_first_heading">
-                    Weigth Management
-                    <li class="dropdown_second_heading">Weigth Management Herbs</li>
-                </ul>
-            </div>
-        </div>
-        <div class="drop_down">Diabetes <i class="fa fa-angle-down" aria-hidden="true"></i>
-            <div class="drop_down_content">
-            <ul class="dropdown_first_heading" style="list-style-type:none">Device 
-                <li class="dropdown_second_heading">Blood Glucose Moniter</li>
-                <li class="dropdown_second_heading">Test Strip & Lancets</li>
-                <li class="dropdown_second_heading">Syrings & Pens</li>
-            </ul>
-            <ul class="dropdown_first_heading" style="list-style-type:none">Diabitic Medicines 
-                <li class="dropdown_second_heading">Vitamins,Minerals & Antioxidents</li>
-                <li class="dropdown_second_heading">Homeopathy Medicines</li>
-                <li class="dropdown_second_heading">Ayurvedic Medicines</li>
-            </ul>
-            <ul class="dropdown_first_heading" style="list-style-type:none">Diabetic Diet 
-                <li class="dropdown_second_heading">Juices & vinegars</li>
-                <li class="dropdown_second_heading">SuperFoods</li>
-            </ul>
-            </div>
-        </div>
-        <div class="drop_down">Healthcare Device <i class="fa fa-angle-down" aria-hidden="true"></i>
-          <div class="drop_down_content">
-            <ul class="dropdown_first_heading">Masks N95, Surgical & More</ul>
-            <ul class="dropdown_first_heading">BP Monitors</ul>
-            <ul class="dropdown_first_heading"> Nebulizers & Vaporizers</ul>
+                  
+                  <div class="cartLogo"> 
+                      <img src="https://onemg.gumlet.io/cart-icon-rebrand_vp4k0f.svg" alt="not found" id="red-cart" onclick="window.location.href = 'cart.html'"/>
+                      <div id="cartItembox" onclick="window.location.href = 'cart.html'">0</div>
+                  </div>
+                  <div>
+                      <p>Need Help ?</p>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="drop_down">Personal Care <i class="fa fa-angle-down" aria-hidden="true"></i></div>
-        <div class="drop_down">Health Condition <i class="fa fa-angle-down" aria-hidden="true"></i></div>
-        <div class="drop_down">Ayurveda Products <i class="fa fa-angle-down" aria-hidden="true"></i></div>
-        <div class="drop_down">Homeopathy <i class="fa fa-angle-down" aria-hidden="true"></i></div>
-        
+          
+      </nav>
   
-    </div>
-  </div>`;
+
+      <!-- Header Search Section -->
+      <section>
+          <div class="searchOuter">
+              <div class="searchInner1">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <input type="text"  placeholder="Enter Your City..."/>
+                  <i class="fa-solid fa-location-crosshairs" id="cross"></i>
+                  <input type="text" placeholder="Search for Medicines and Health Products "/>
+                  <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <div class="searchInner2">
+                  <p><i class="fa-solid fa-bolt"></i></p>
+                  <p class="quic">QUICK BUY! Get 15% off on medicines*
+                  </p>
+                  <button><b>Quick Order</b></button>
+              </div>
+          </div>
+      </section>
+
+      
+      
+<!-- Drop Down Section -->
+      <section>
+          <div class="dropdown">
+              <ul>
+                  <div><li><a href="#">Health Resource <i class="fa-solid fa-angle-down"></i></a>
+                  
+                      <div class="hidden-box">
+                          <ul>
+                            <li><a href="">All Diseases</a></li>
+                            <li><a href="">All Medicines</a></li>
+                            <li><a href="">Medicines by Therapeutic Class</a></li>
+                          </ul>
+                    </div>
+                  </li></div>
+                  
+                    
+                  
+                  <div><li><a href="#">Vitamins and Nutrtion <i class="fa-solid fa-angle-down"></i></a>
+                  
+                      <div class="hidden-box">
+                          <ul>
+                            <li><a href="">Vitamins & Supplements</a>
+                                <ul class="inside">
+                                  <li class="light"><a href="sProductPage.html">Multivitamins</a></li>
+                                  <li class="light"><a href="">Vitamins A-Z</a></li>
+                                  <li class="light"><a href="">Mineral Supplements</a></li>
+                                  <li class="light"><a href="">Vitamin B12 & B Complex</a></li>
+
+                                </ul>
+                          </li>
+                            <li><a href="">Nutritional Drinks</a>
+                              <ul class="inside">
+                                  <li class="light"><a href="">Adult Daily Nutrition</a></li>
+                                  <li class="light"><a href="">Kids Nutrition (2-15 Yrs)</a></li>
+                                  <li class="light"><a href="">For Women</a></li>
+                                </ul>
+                          </li>
+                            <li><a href="">Health Food Drinks</a>
+                          
+                              <ul class="inside">
+                                  <li class="light"><a href="">Green Tea & Herbal Tea</a></li>
+                                  <li class="light"><a href="">Apple Cider Vinegar</a></li>
+                                  <li class="light"><a href="">Healthy Snacks</a></li>
+                                </ul>
+                          </li>
+                          </ul>
+                           
+                          <!-- testing -->
+                          <ul>
+                              <li><a href="">Protein Supplements</a>
+                                  <ul class="inside">
+                                    <li class="light"><a href="">Why Protein</a></li>
+                                    <li class="light"><a href="">Amino Acids</a></li>
+                                    <li class="light"><a href="">Mass Gainers</a></li>
+                                    <li class="light"><a href="">Workout Essential</a></li>
+                                    <li class="light"><a href="">Fat Burners</a></li>
+                                  </ul>
+                            </li>
+                              <li><a href="">Omega & Fish Oil</a>
+                                <ul class="inside">
+                                    <li class="light"><a href="">Fish Oil</a></li>
+                                    <li class="light"><a href="">Cod Liver Oil</a></li>
+                                    <li class="light"><a href="">Flax Seed Oil</a></li>
+                                  </ul>
+                            </li>
+                              <li><a href="">Immunity Boosters</a>
+                            
+                                <ul class="inside">
+                                    <li class="light"><a href="">Chyawanprasha</a></li>
+                                    <li class="light"><a href="">Vitamin C</a></li>
+                                    <li class="light"><a href="">Herbal Teas</a></li>
+                                    <li class="light"><a href="">Antioxidant Supplements</a></li>
+                                    <li class="light"><a href="">Ayurvedic Supplements</a></li>
+                                  </ul>
+                            </li>
+                            </ul>
+                          <!--  -->
+                           <!-- testing -->
+                           <ul>
+                              <li><a href="">Specialty Supplements</a>
+                                  <ul class="inside">
+                                    <li class="light"><a href="">Plant based Supplements</a></li>
+                                    <li class="light"><a href="">Beauty Supplemets</a></li>
+                                    <li class="light"><a href="">Pre and Probiotics</a></li>
+                                    <li class="light"><a href="">Glucosamine</a></li>
+                                    <li class="light"><a href="">Antioxidants</a></li>
+                                    <li class="light"><a href="">Biotin</a></li>
+                                  </ul> 
+                            </li>
+                              <li><a href="">Weight Management</a>
+                                <ul class="inside">
+                                    <li class="light"><a href="">Weight Management Herbs</a></li>
+                                    <li class="light"><a href="">Meal Replacements</a></li>
+                                    <li class="light"><a href="">Weight Gain</a></li>
+                                  </ul>
+                            </li>
+                              
+                            </ul>
+                          <!--  -->
+                    </div>
+                  </li></div>
+                  <div><li><a href="#">Diabetes  <i class="fa-solid fa-angle-down"></i></a>
+                      <div class="hidden-box">
+                          <ul>
+                            <li><a href="">Devices</a>
+                                <ul class="inside">
+                                  <li class="light"><a href="">Blood Glucose Monitors</a></li>
+                                  <li class="light"><a href="">Test Strips & Lancets</a></li>
+                                  <li class="light"><a href="">Syringes & Pens</a></li>
+                                </ul>
+                          </li>
+                            <li><a href="">Diabetic Medicines</a>
+                              <ul class="inside">
+                                  <li class="light"><a href="">Vitamins, Minerals & Antioxidants</a></li>
+                                  <li class="light"><a href="">Homeopathy Medicines</a></li>
+                                  <li class="light"><a href="">Ayurvedic Medicines</a></li>
+                                </ul>
+                          </li>
+                          </ul>
+                           
+                          <!-- testing -->
+                          <ul>
+                              <li><a href="">Sugar Substitutes</a>
+                                  <br>
+                                  
+                            </li>
+                              <li><a href="">Diabetic Diet</a>
+                                <ul class="inside">
+                                    <li class="light"><a href="">Juices & Vinegars</a></li>
+                                    <li class="light"><a href="">Superfoods</a></li>
+                                  </ul>
+                            </li>
+                              <li><a href="">Diabetic Foot Health</a>
+                                
+                            </li>
+                            </ul>
+                          <!--  -->
+                           <!-- testing -->
+                          
+                          <!--  -->
+                    </div>
+                  
+                  </li></div>
+                  <div><li><a href="#">Healthcare Devices <i class="fa-solid fa-angle-down"></i></a>
+                  
+                      <div class="hidden-box">
+                          <ul>
+                            <li><a href="">Top brands in Healthcare Devices</a>
+                                <ul class="inside">
+                                  <li class="light"><a href="">Omron</a></li>
+                                  <li class="light"><a href="">Accu-check</a></li>
+                                  <li class="light"><a href="">Dr. Morepen Devices</a></li>
+                                  <li class="light"><a href="">Dr Trust</a></li>
+                                  <li class="light"><a href="">OneTouch</a></li>
+                                  <li class="light"><a href="">Contour</a></li>
+                                </ul>
+                          </li>
+                            <li><a href="">Masks (N95, Surgical and more)</a>
+                              <ul class="inside">
+                                  <li class="light"><a href="">Face Shield</a></li>
+                                  <li class="light"><a href="">Surgical Masks</a></li>
+                                  <li class="light"><a href="">N95 Masks</a></li>
+                                </ul>
+                          </li>
+                          <li><a href="">Oxygen Concentrators & Cans</a></li>
+                          <li><a href="">BP Monitors</a></li>
+                          <li><a href="">Nebulizers & Vaporizers</a></li>
+                          </ul>
+                           
+                          <!-- testing -->
+                          <ul>
+                              <li><a href="">Oximeters & Pedometers</a></li>
+                              <li><a href="">Vital Signs Monitors & Wearables</a></li>
+                              <li><a href="">Weighing Scales</a></li>
+                              <li><a href="">Thermometers</a>
+                                <ul class="inside">
+                                    <li class="light"><a href="">IR Thermometers</a></li>
+                                    
+                                  </ul>
+                            </li>
+                              <li><a href="">Body Massager</a></li>
+                              <li><a href="">Diabetes Monitors</a></li>
+                              <li><a href="">Mobility Equipments</a></li>
+                              <li><a href="">Exercise Equipments</a></li>
+                              <li><a href="">Doctor's Corner</a>
+                                  <ul class="inside">
+                                      <li class="light"><a href="">Stethoscopes</a></li>
+                                      <li class="light"><a href="">Tapes & Bandages</a></li>
+                                      <li class="light"><a href="">Clinical Diagonstic Equipments</a></li>
+                                      <li class="light"><a href="">Dressings & Wound Care</a></li>
+                                    </ul>
+                              </li>
+                            </ul>
+                          <!--  -->
+                           <!-- testing -->
+                           <ul>
+                              <li><a href="">Supports & Braces</a>
+                                  <ul class="inside">
+                                    <li class="light"><a href="">Neck & Shoulder Support</a></li>
+                                    <li class="light"><a href="">Knee & Leg Support</a></li>
+                                    <li class="light"><a href="">Back & Abdomen Support</a></li>
+                                    <li class="light"><a href="">Ankle & Foot Support</a></li>
+                                    <li class="light"><a href="">Hand & Wrist Braces</a></li>
+                                    <li class="light"><a href="">Arm & Elbow Support</a></li>
+                                    <li class="light"><a href="">Cervical Pillows</a></li>
+                                    <li class="light"><a href="">Compression support & sleeves</a></li>
+                                    <li class="light"><a href="">heel support</a></li>
+                                    <li class="light"><a href="">Crepe Bandage</a></li>
+                                  </ul> 
+                            </li>
+                              
+                              
+                            </ul>
+                          <!--  -->
+                    </div>
+                  
+                  </li></div>
+         <div>         <li><a href="#">Personal Care <i class="fa-solid fa-angle-down"></i></a>
+      
+          <div class="hidden-box">
+              <ul>
+                <li><a href="">Sexual Wellness</a>
+                    <ul class="inside">
+                      <li class="light"><a href="">Condoms</a></li>
+                      <li class="light"><a href="">Lubricants & Massage Gels</a></li>
+                      <li class="light"><a href="">Personal body massagers</a></li>
+                      <li class="light"><a href="">Men Performance Enhancer</a></li>
+                      <li class="light"><a href="">Sexual Health Supplements</a></li>
+                    </ul>
+              </li>
+                <li><a href="">Skin Care</a>
+                  <ul class="inside">
+                      <li class="light"><a href="">Shampoo</a></li>
+                      <li class="light"><a href="">Hair Conditioners</a></li>
+                      <li class="light"><a href="">Hair Growth Supplements</a></li>
+                      <li class="light"><a href="">Hair Oils</a></li>
+                      <li class="light"><a href="">Hair Growth Products</a></li>
+                    </ul>
+              </li>
+              </ul>
+               
+              <!-- testing -->
+              <ul>
+                  <li><a href="">Elderly Care</a>
+                      <ul class="inside">
+                          <li class="light"><a href="">Adult Diapers</a></li>
+                          <li class="light"><a href="">Bone & Joint Health</a></li>
+                          <li class="light"><a href="">Living & Safety Aids</a></li>
+                          <li class="light"><a href="">Othopaedic Supports</a></li>
+                        </ul>
+                </li>
+                  <li><a href="">Women Care</a>
+                    <ul class="inside">
+                        <li class="light"><a href="">Feminine Hygiene</a></li>
+                        <li class="light"><a href="">Women Care Supplements</a></li>
+                        <li class="light"><a href="">Mother Care</a></li>
+                        <li class="light"><a href="">Menopause</a></li>
+                        <li class="light"><a href="">Polycystic Ovary Syndrome</a></li>
+                      </ul>
+                </li>
+                 
+        </div>
+      
+      </li></div>
+             <div>     <li><a href="#">Health Conditions <i class="fa-solid fa-angle-down"></i></a>
+          
+              <div class="hidden-box">
+                  <ul>
+                    <li><a href="">Stomach Care</a></li>
+                    <li><a href="">Heart Care</a></li>
+                    <li><a href="">Bone, Joint & Muscle Care</a></li>
+                    <li><a href="">Pain Relief</a>
+                      <ul class="inside">
+                          <li class="light"><a href="">Heating Acids</a></li>
+                        </ul>
+                  </li>
+                  <li><a href="">Eye Care</a>
+                      <ul class="inside">
+                          <li class="light"><a href="">Eye Lubricants</a></li>
+                        </ul>
+                  </li>
+                  <li><a href="">Eye Care</a>
+                      <ul class="inside">
+                          <li class="light"><a href="">Hearing Aid Device</a></li>
+                        </ul>
+                  </li>
+                  </ul>
+                   
+                  <!-- testing -->
+                  <ul>
+                      <li><a href="">First Aid</a></li>
+                      <li><a href="liver.html">Liver Care</a></li>
+                      <li><a href="">Cold & Cough</a></li>
+                      <li><a href="">Fever</a></li>
+                      <li><a href="">Mental Wellness</a></li>
+                      <li><a href="">Kidney Care</a></li>
+                      <li><a href="">Respiratory Care</a></li>
+                      <li><a href="">Piles, Fissures & Fistula</a></li>
+                      <li><a href="">Smoking Cessation</a></li>
+                      <li><a href="">Derma Care</a></li>
+                      </ul>
+            </div>
+          
+          </li></div>
+             <div>     <li><a href="#">Ayurveda Products <i class="fa-solid fa-angle-down"></i></a>
+          
+              <div class="hidden-box testingGap2">
+                  <ul>
+
+                      <li><a href="">Ayurveda Top Brands</a>
+                          <ul class="inside">
+                              <li class="light"><a href="">Dabur</a></li>
+                              <li class="light"><a href="">Sri Sri Tattva</a></li>
+                              <li class="light"><a href="">Kerala Ayurveda</a></li>
+                              <li class="light"><a href="">Jiva Ayurveda</a></li>
+                              <li class="light"><a href="">Patanjali</a></li>
+                            </ul>
+                      </li>
+
+                      <li><a href="">Popular Categories</a>
+                          <ul class="inside">
+                              <li class="light"><a href="">Herbal Juice</a></li>
+                              <li class="light"><a href="">Chyawanprash</a></li>
+                              <li class="light"><a href="">Ayurvedic Immunity Boosters</a></li>
+                              <li class="light"><a href="">Explore Popular Herbs</a></li>
+                              <li class="light"><a href="">Herbal Supplements</a></li>
+                            </ul>
+                      </li>
+
+                    
+                  </ul>
+
+
+                  <ul>
+
+                      <li><a href="">Top Health Concerns</a>
+                          <ul class="inside">
+                              <li class="light"><a href="">Ayurvedic Respiratory care</a></li>
+                              <li class="light"><a href="">Cough, Cold & Fever</a></li>
+                              <li class="light"><a href="">Sexual Wellness</a></li>
+                              <li class="light"><a href="">Bone, Joint and Muscle Care</a></li>
+                              <li class="light"><a href="">Stomach Care</a></li>
+                              <li class="light"><a href="">Diabetes Care</a></li>
+                              <li class="light"><a href="liver.html">Liver Care</a></li>
+                              <li class="light"><a href="">Mind Care</a></li>
+                              <li class="light"><a href="">Cardiac Care</a></li>
+                            </ul>
+                      </li>
+
+                      <li><a href="">Unani Medicines</a>
+                          <ul class="inside">
+                              <li class="light"><a href="">Hamdard Unani</a></li>
+                              <li class="light"><a href="">AMU Dawakhana</a></li>
+                              <li class="light"><a href="">Rex Remedies</a></li>
+                              <li class="light"><a href="">Dehlvi Remedies</a></li>
+                            </ul>
+                      </li>
+
+                    
+                  </ul>
+                   
+                  
+            </div>
+            
+          
+          </li></div>
+          <div>     <li><a href="#">Covid Essentials <i class="fa-solid fa-angle-down"></i></a>
+            
+          <div class="hidden-box testingGap2">
+              <ul>
+
+                  <li><a href="">Covid Vacination</a>
+                      <ul class="inside">
+                          <li class="light"><a href="">Covid</a></li>
+                          <li class="light"><a href="">Sri</a></li>
+                          <li class="light"><a href="">Kerala Ayurveda</a></li>
+                          <li class="light"><a href="">Jiva Ayurveda</a></li>
+                          <li class="light"><a href="">Patanjali</a></li>
+                        </ul>
+                  </li>
+
+                  <li><a href="">Popular Categories</a>
+                      <ul class="inside">
+                          <li class="light"><a href="">Herbal Juice</a></li>
+                          <li class="light"><a href="">Chyawanprash</a></li>
+                          <li class="light"><a href=""> Immunity Boosters</a></li>
+                          <li class="light"><a href="">Explore Popular Herbs</a></li>
+                          <li class="light"><a href="">Herbal Supplements</a></li>
+                        </ul>
+                  </li>
+
+                
+              </ul>
+
+
+              <ul>
+
+                  <li><a href="">Top Health Concerns</a>
+                      <ul class="inside">
+                          <li class="light"><a href="">Ayurvedic Respiratory care</a></li>
+                          <li class="light"><a href="">Cough, Cold & Fever</a></li>
+                          <li class="light"><a href="">Sexual Wellness</a></li>
+                          <li class="light"><a href="">Bone, Joint and Muscle Care</a></li>
+                          <li class="light"><a href="">Stomach Care</a></li>
+                          <li class="light"><a href="">Diabetes Care</a></li>
+                          <li class="light"><a href="liver.html">Liver Care</a></li>
+                          <li class="light"><a href="">Mind Care</a></li>
+                          <li class="light"><a href="">Cardiac Care</a></li>
+                        </ul>
+                  </li>
+
+                  <li><a href="">Unani Medicines</a>
+                      <ul class="inside">
+                          <li class="light"><a href="">Hamdard Unani</a></li>
+                          <li class="light"><a href="">AMU Dawakhana</a></li>
+                          <li class="light"><a href="">Rex Remedies</a></li>
+                          <li class="light"><a href="">Dehlvi Remedies</a></li>
+                        </ul>
+                  </li>
+
+                
+              </ul>
+               
+              
+        </div>
+      
+      </li></div>
+              </ul>
+          </div>
+      </section>
+  </header>`;
 }
 export default navbar;
