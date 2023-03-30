@@ -23,6 +23,3 @@ module.exports={
     ProductModel
 }
 
-module.exports={
-    ProductModel
-}
