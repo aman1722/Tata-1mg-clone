@@ -2,15 +2,18 @@ const express = require("express")
 const { connection } = require("./connection/db")
 require("dotenv").config()
 var cors = require('cors');
+const { productRouter } = require("./routes/product.router");
+const { userRouter } = require("./routes/user.router")
 
 //App
 const app = express()
-app.use("/users",userRouter)
+
 
 //Middleware
 app.use(express.json())
 app.use(cors())
-
+app.use("/users",userRouter)
+app.use("/product",productRouter)
 
 //App Listining
 app.listen(process.env.port,async()=>{

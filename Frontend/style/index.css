@@ -1020,10 +1020,10 @@
     padding: 7px 10px;
     cursor: pointer;
   }
- .swiper-button-next , .swiper-button-prev{
-    /* color:#22542f; */
+ /* .swiper-button-next , .swiper-button-prev{
     
-  }
+    
+  } */
   .body{
     height: 70px;
     /* width: 100%; */
@@ -1130,4 +1130,9 @@
   }
   .swiper-slide p{
     text-align: center !important;
+  }
+  .fetch{
+    width: 100%;
+    height: 300px;
+    background-color:white
   }
