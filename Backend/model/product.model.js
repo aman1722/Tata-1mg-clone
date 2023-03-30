@@ -22,3 +22,7 @@ const ProductModel = mongoose.model("product",productSchema)
 module.exports={
     ProductModel
 }
+
+module.exports={
+    ProductModel
+}
