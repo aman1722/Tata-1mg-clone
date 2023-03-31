@@ -3,6 +3,21 @@ const {ProductModel}=require("../model/product.model")
 
 const productRouter = express.Router()
 
+
+
+//get all product
+productRouter.get("/", async(req,res)=>{
+    const {page,limit} = req.query
+    try {
+      const data = await ProductModel.find().limit(limit).skip(page)
+      res.status(200).send(data)
+    } catch (error) {
+      res.status(400).send({"msg":error.message})
+    }
+})
+
+
+//add a new product
 productRouter.post("/add",async(req,res)=>{
     console.log(req.body)
     try {
@@ -13,7 +28,7 @@ productRouter.post("/add",async(req,res)=>{
       res.status(400).send({"msg":error.message})
     }
   
-  })
+})
 
 
 
