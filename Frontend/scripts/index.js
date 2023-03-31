@@ -125,4 +125,4 @@ console.log(cartArrayS1.length);
     window.location.href = "cart.html";
   }
 
-// let val = document.getElementById("login_text_js")
+let appendSection = document.getElementById("fetch")
