@@ -13,7 +13,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 app.use("/users",userRouter)
-app.use("/product",productRouter)
+app.use("/products",productRouter)
 
 //App Listining
 app.listen(process.env.port,async()=>{
