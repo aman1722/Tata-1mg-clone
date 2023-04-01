@@ -1,0 +1,427 @@
+/* footer css start  */
+
+.second {
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.second>div:last-child {
+    margin: auto;
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px 50px;
+    grid-gap: 50px;
+    justify-content: center;
+    justify-items: center;
+}
+
+.second h2 {
+    text-align: center;
+    padding: 24px 0px;
+    font-weight: 400;
+    color: #1A1A1A;
+    line-height: 34px;
+}
+
+.second p {
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 1px;
+}
+
+.third {
+    font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    margin: auto;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgb(159, 157, 157);
+}
+
+.third>div>input {
+    width: 25vw;
+    padding: 10px 16px;
+    margin-left: 50px;
+    margin-right: 6px;
+    background-color: RGB(241, 244, 246);
+    outline: none;
+    border: none;
+}
+
+.third>div>button,
+#signup {
+    color: white;
+    background-color: RGB(255, 111, 97);
+    font-size: 14px;
+    line-height: 20px;
+    padding: 9px 18px;
+    font-weight: 400;
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.third>h2 {
+    font-weight: 400;
+    color: #1A1A1A;
+    line-height: 34px;
+    font-size: 22px;
+}
+
+.fourth {
+    font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 44px 50px;
+    padding-top: 80px;
+    background-color: #fbf3e3;
+}
+
+.fourth h4 {
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+
+.fourth>div>p {
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.fourth>div p a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #666666;
+}
+
+/* .fourth > div p a:hover{
+    class:"before_login_style"
+} */
+
+.logo {
+    width: 70%;
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo>div {
+    background-color: black;
+    height: 25px;
+    width: 25px;
+    border-radius: 3.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.fourth>div:last-child img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.fourth>div:last-child div {
+    width: 60%;
+}
+
+
+.five {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    background-color: #fbf3e3;
+    border-top: 1px solid rgb(159, 157, 157);
+    padding: 40px 120px;
+    font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.five>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.five>div>div:last-child>p {
+    margin-top: 10px;
+    color: RGB(118, 118, 118);
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.six {
+    margin: auto;
+    border-top: 0.1px solid grey;
+    border-bottom: 0.1px solid grey;
+    text-align: center;
+    padding: 30px 30px;
+    background-color: #fbf3e3;
+    font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.six>h3 {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+
+}
+
+.six>img {
+    width: 80px;
+}
+
+.hr {
+    width: 80%;
+    margin: auto;
+    background-color: red;
+}
+
+.seven {
+    padding: 30px 30px;
+    background-color: #fbf3e3;
+    font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: flex;
+}
+
+.seven img {
+    width: 10%;
+}
+
+.seven>p {
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+    font-weight: 600;
+    padding: 10px 10px;
+    line-height: 20px;
+}
+
+/* footer css end  */
+
+
+#main {
+    width: 85%;
+    height: auto;
+
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 50px;
+}
+
+body {
+    background: whitesmoke;
+}
+
+#pro_info {
+    background: white;
+    margin-top: 30px;
+    height: auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+   
+}
+
+#main>div {
+
+    margin-left: 20px;
+}
+
+.pro_name {
+    font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    line-height: 31px;
+    font-weight: 600;
+    color: #212121;
+}
+
+#image {
+    margin-top: 30px;
+    /* border: 2px solid black; */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 5px;
+    height: 450px;
+    /* border: 2px solid black; */
+}
+
+.pro_img {
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.tata {
+    font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #ff6f61;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.div_pro_rating {
+    background-color: #1aab2a;
+    font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+    width: 50px;
+    height: 25px;
+    padding-left: 5px;
+    border-radius: 10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#price_box {
+    width: 100%;
+    height: 300px;
+    margin-top: 30px;
+    border-radius: 10px;
+    background: white;
+    padding: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.price_head {
+    font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #212121;
+    margin-left: 30px;
+}
+
+.pro_price {
+    font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    color: #3b3b3b;
+}
+
+.pro_mrp {
+    font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #666666;
+    font-weight: 400;
+    margin-left: 10px;
+
+    text-decoration: line-through;
+}
+
+.pro_dis {
+    font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #1aab2a;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.price_div {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.include {
+    font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #666666;
+    margin-left: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.care_span2 {
+    font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #3b3b3b;
+    font-weight: 400;
+    margin-left: 10px;
+
+}
+
+.care_plan {
+    width: 60px;
+    font-size: 12px;
+    height: 20px;
+    padding-left: 5px;
+
+    background-color: #903e38;
+    color: white;
+    font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    margin-left: 30px;
+    border-radius: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+.pro_quantity {
+    font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #666666;
+    margin-left: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.add_cart {
+    width: 90%;
+    height: 50px;
+    margin-left: 5%;
+    background-color: #ff6f61;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+    border-radius: 5px;
+    border: transparent;
+    cursor: pointer;
+}
+
+#ad_box1 {
+    width: 100%;
+    height: 100px;
+
+    margin-top: 30px;
+}
+
+.high {
+    font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #212121;
+    margin-left: 10px;
+}
+
+li {
+    font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #212121;
+}
+
+#pro_info>ul {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.high {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
