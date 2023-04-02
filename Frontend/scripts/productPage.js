@@ -18,7 +18,7 @@ function displaypro(arr) {
         rating.setAttribute("class", "pro_rating");
         rating_div.append(rating);
         let pro_img = document.createElement("img");
-        pro_img.setAttribute("src", ele.img);
+        pro_img.setAttribute("src", ele.image);
         pro_img.setAttribute("class", "pro_img");
 
         var price_box_head = document.createElement("p");
@@ -28,16 +28,16 @@ function displaypro(arr) {
         var price = document.createElement("p");
         price.setAttribute("class", "price_div");
         var span = document.createElement("span");
-        span.textContent = "₹" + ele.mrp;
+        span.textContent = "₹" + ele.price;
         span.setAttribute("class", "pro_price");
 
         var span2 = document.createElement("span");
-        let dprice = ele.mrp + 250;
+        let dprice = ele.price + 250;
         span2.textContent = "₹" + dprice;
         span2.setAttribute("class", "pro_mrp");
 
         var span3 = document.createElement("span");
-        span3.textContent = ele.discount + "% off";
+        span3.textContent =  "15% off";
         span3.setAttribute("class", "pro_dis");
 
         price.append(span, span2, span3);
@@ -45,7 +45,7 @@ function displaypro(arr) {
         var care_price = document.createElement("p");
         care_price.setAttribute("class", "price_div");
         var care_span = document.createElement("span");
-        care_span.textContent = "₹" + ele.mrp;
+        care_span.textContent = "₹" + ele.price;
         care_span.setAttribute("class", "pro_price");
         care_price.setAttribute("class", "price_div");
         var care_span2 = document.createElement("span");
@@ -63,7 +63,7 @@ function displaypro(arr) {
         include.setAttribute("class", "include");
 
         let quantity = document.createElement("p");
-        quantity.textContent = "Quantity :-" + ele.quantity + " " + "peice";
+        quantity.textContent = "Quantity :-" + "10 " + "peice";
         quantity.setAttribute("class", "pro_quantity");
 
         let add_cart = document.createElement("button");

@@ -58,8 +58,13 @@
     color: gray;
     line-height: 1.2;
   }
-  
-  #account_2 {
+  #signup {
+    width: 100px;
+    margin: auto;
+    background: orange;
+    height: 50px;
+  }
+  #account_1 {
     display: block;
     width: 100%;
     height: 98%;
@@ -69,9 +74,10 @@
     padding: 15px 15%;
   }
   
-  #account_1,
+  #account_2,
   #verify_otp,
-  #email_id_new {
+  #email_id_new ,
+  #enter_password,#enter_username{
     width: 100%;
     height: 98%;
     box-sizing: border-box;
@@ -83,7 +89,7 @@
   #account_continue,
   #login_button-1,
   #done,
-  #email_continue {
+  #email_continue,#done2,#done3 {
     width: 100%;
     background-color: #ff6f61;
     border: none;
@@ -96,13 +102,14 @@
   #account_continue:hover,
   #login_button-1:hover,
   #done:hover,
-  #email_continue:hover {
+  #email_continue:hover, #done2:hover ,#done3:hover {
     background: #fc6456;
   }
   #mobile_number,
   #login_mobile_number,
   #one_time_p,
-  #email_new {
+  #email_new,
+  #password,#Username{
     width: 100%;
     box-sizing: border-box;
     border: none;
@@ -172,7 +179,7 @@
     justify-content: space-between;
     display: flex;
   }
-  #done {
+  #done,#done2,#done3 {
     margin-top: 120px;
   }
   #wrong_otp {
@@ -193,13 +200,12 @@
     font-weight: bold;
   }
   
-  #login_mobile_number,
+  #mobile_number,
   #one_time_p,
-  #email_new{
+  #email_new,#password,#Username{
     outline: none;
   }
-
-.second {
+  .second {
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -405,6 +411,6 @@
     padding: 10px 10px;
     line-height: 20px;
 }
-#signup_span:hover{
+#login_span:hover{
   cursor: pointer;
 }

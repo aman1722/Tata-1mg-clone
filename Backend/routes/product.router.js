@@ -9,8 +9,12 @@ const productRouter = express.Router()
 productRouter.get("/", async(req,res)=>{
     const {page,limit} = req.query
     try {
+      const count = await ProductModel.find();
       const data = await ProductModel.find().limit(limit).skip(page)
-      res.status(200).send(data)
+      // res.header();
+      // console.log(res.headers.get('X-Total-Count'))
+      res.setHeader("X-Total-Count", count.length).status(200).send(data)
+
     } catch (error) {
       res.status(400).send({"msg":error.message})
     }

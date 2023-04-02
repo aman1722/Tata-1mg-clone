@@ -1,3 +1,6 @@
+
+
+
 // Slider Section starts from here
 
 var i = 0;
@@ -91,20 +94,20 @@ var swiper = new Swiper(".pop-Swiper", {
 
 // Name Section.....
 
-let val = localStorage.getItem("mobile_number") || 2;
+// let val = localStorage.getItem("mobile_number") || 2;
 
-if (val.length >= 5) {
-  document.getElementById("login_text_js").innerHTML = `<i class="fa-solid fa-user"></i>`;
-  document.getElementById("login_text_js1").innerText = "My Profile";
-  document.getElementById("login_text_js2").innerText = " ";
-  document.getElementById("signup").innerHTML = `<b>PROFILE</b>`;
+// if (val.length >= 5) {
+//   document.getElementById("login_text_js").innerHTML = `<i class="fa-solid fa-user"></i>`;
+//   document.getElementById("login_text_js1").innerText = "My Profile";
+//   document.getElementById("login_text_js2").innerText = " ";
+//   document.getElementById("signup").innerHTML = `<b>PROFILE</b>`;
 
-  document.getElementById("signup").addEventListener("click", function () {
-    window.location.href = "index.html";
-  });
+//   document.getElementById("signup").addEventListener("click", function () {
+//     window.location.href = "index.html";
+//   });
 
 
-}
+// }
 
 
 // let cartArrayS1 = JSON.parse(localStorage.getItem("cartArrayS1")) || [];
@@ -126,11 +129,24 @@ if (val.length >= 5) {
 //   }
 
 // let appendSection = document.getElementById("fetch")
+const jwttoken = localStorage.getItem("token");
+const userinfo=JSON.parse(localStorage.getItem("userinfo"));
+// console.log(document.getElementById("logtext"))
+
+
+const div = document.getElementById("beforelogin")
+console.log(div)
 
 async function display() {
   try {
 
-    let res = await fetch("http://localhost:8080/products/?page=1&limit=7")
+    let res = await fetch("https://nice-cyan-pike-vest.cyclic.app/products/?page=1&limit=7",{
+      method:"GET",
+      headers:{
+          "Content-Type": "application/json",
+           "Authorization": `${jwttoken}`
+      }
+    })
 
     let data = await res.json();
     console.log(data)
@@ -178,7 +194,7 @@ function displaymg(mg_data) {
     document.querySelector("#fetch").append(div1);
 
     let data_send = {
-      img: ele.image,
+      image: ele.image,
       name: ele.name,
       Description: ele.Description,
       rating: ele.rating,

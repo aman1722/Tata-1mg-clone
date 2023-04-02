@@ -7,14 +7,14 @@ const userRouter = express.Router()
 
 // Registration logic
 userRouter.post("/register",async(req,res)=>{
-    const {name,email,gender,password,age,city,Phone_no}=req.body
+    const {name,email,password,Phone_no}=req.body
     try {
         const alreadyExist=await UserModel.find({name,email})
         if(alreadyExist.length>0){
             res.status(200).send({"msg":"User already exist, please login"})
         }else{
             bcrypt.hash(password, 5, function(err, hash) {
-                const user = new UserModel({name,email,gender,password:hash,age,city,Phone_no})
+                const user = new UserModel({name,email,password:hash,Phone_no})
                 user.save()
                 res.status(200).send({"msg":"New user Registered!"})
             });
@@ -27,14 +27,14 @@ userRouter.post("/register",async(req,res)=>{
 
 //Login logic
 userRouter.post("/login",async(req,res)=>{
-     const {email,password}=req.body
+     const {email,password,Phone_no}=req.body
      try {
-        const user = await UserModel.find({email})
+        const user = await UserModel.find({email,Phone_no})
 
         if(user.length>0){
             bcrypt.compare(password, user[0].password, function(err, result) {
                 if(result){
-                    res.status(200).send({"msg":"Login Successful!","token":jwt.sign({"userId":user[0]._id},"evaluation")})
+                    res.status(200).send({"msg":"Login Successful!","token":jwt.sign({"userId":user[0]._id},"evaluation"),"userinfo":user[0]})
                 }else{
                     res.status(400).send({"msg":"Wrong Credentials!"})
                 }

@@ -14,3 +14,14 @@
 </body>
 </html>
 <script src="./scripts/navbar.js"></script>
+<script>
+    const jwttoken = localStorage.getItem("token");
+const userinfo=JSON.parse(localStorage.getItem("userinfo"));
+console.log(document.getElementById("logtext"))
+if(jwttoken){
+   document.getElementById("login_text_js").innerText=userinfo.name;
+   document.getElementById("login_text_js2").innerText="Logout";
+}else{
+
+}
+</script>

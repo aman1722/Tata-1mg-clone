@@ -162,6 +162,7 @@ document.getElementById("done").addEventListener("click", function () {
     c.style.display = "none";
     d.style.display = "block";
     document.getElementById("wrong_otp").style.display = "none";
+    // console.log(document.querySelector("one_time_p").value)
  // }
 });
 
@@ -190,86 +191,47 @@ document
     }
   });
 
- 
-   // signup
- let register_data;
- async function Register(event){
-      try{
-          event.preventDefault();
-      let register_data={
-         mobile:document.querySelector("#mobile_number").value,
-         password:document.querySelector("#one_time_p").value,
-         email:document.querySelector("#email_new").value,
-       };
-       register_data=JSON.stringify(register_data);
-       //console.log("register_data:",register_data);
-       let mobile=document.querySelector("#mobile_number").value;
-       let password=document.querySelector("#one_time_p").value;
-      if(mobile.length==10&&password.length>=8){
-        let reg_api=`https://tata1mg.herokuapp.com/register`
-        let response=await fetch(reg_api,{
-            method:'POST',
-            body:register_data,
-            headers:{
-                "Content-Type":'application/json',
-            },
-        })
-        let data=await response.json();
-        //console.log("data:",data);
-        if(data==null){
-            alert('Registration failed, user already exists or enter valid 10 digit mobile or valid email');
-            window.location.href="signup.html";
-        }else{
-            alert('Registration Successful,Please login')
-            display();
-        }
-      }else{
-        alert('Registration failed, user already exists or enter valid 10 digit mobile or valid email')
-        window.location.href="signup.html";
-      }
-      }catch(err){
-          console.log("err:",err);
-      }
-   }
-   function display(){
-    window.location.href="login.html";
-  }
+
 
 
   //login
-
-  var user_login=JSON.parse(localStorage.getItem("user_login"))||"";
-  let login_data;
  async function login(event){
       try{
           event.preventDefault();
        login_data={
-         mobile:document.querySelector("#login_mobile_number").value,
+         Phone_no:document.querySelector("#login_mobile_number").value,
          password:document.querySelector("#one_time_p").value,
          email:document.querySelector("#email_new").value,
        };
-       login_data=JSON.stringify(login_data);
-       //console.log("login_data:",login_data);
-       let reg_api=`https://tata1mg.herokuapp.com/register/login`
-       let response=await fetch(reg_api,{
-           method:'POST',
-           body:login_data,
-           headers:{
-               "Content-Type":'application/json',
-           },
+      
+       console.log("login_data:",login_data);
+       const res =await fetch("https://nice-cyan-pike-vest.cyclic.app/users/login",{
+        method: 'POST',
+        headers: {
+         "Content-Type": 'application/json',
+        },
+        body: JSON.stringify(login_data),
        })
-       let data=await response.json();
-       if(data==null){
-           alert('login failed,email or password or mobile is wrong')
-           loginpage();
+       const data = await res.json();
+       if(data.msg=="Login Successful!"){
+        alert(`${data.msg}`);
+        localStorage.setItem("token",data.token)
+        localStorage.setItem("userinfo",JSON.stringify(data.userinfo))
+       // console.log(data)
+       setTimeout(()=>{
+         window.location.href = "index.html"
+       },3000)
        }else{
-           alert('login Successful')
-           user_login=true;
-           localStorage.setItem("user_login",JSON.stringify(user_login));
-           home();
+        alert(`${data.msg}`);
+        setTimeout(()=>{
+          window.location.href = "login.html"
+        },2000)
        }
+           
       }catch(err){
+        alert(`${error.message}`);
           console.log("err:",err);
+          window.location.href="signup.html"; 
       }
    }
 

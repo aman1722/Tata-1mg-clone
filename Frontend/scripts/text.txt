@@ -1,0 +1,37 @@
+ try {
+        event.preventDefault();
+        let register_data = {
+            name: document.querySelector("#Username").value,
+            email: document.querySelector("#email_new").value,
+            password: document.querySelector("#password").value,
+            Phone_no: document.querySelector("#mobile_number").value,
+        };
+        register_data = JSON.stringify(register_data);
+        //console.log("register_data:",register_data);
+        let Phone_no = document.querySelector("#mobile_number").value;
+        let password = document.querySelector("#password").value;
+        if (Phone_no.length == 10 && password.length >= 8) {
+            let reg_api = `http://localhost:8080/users/register`
+            let response = await fetch(reg_api, {
+                method: 'POST',
+                body: JSON.stringify(register_data),
+                headers: {
+                    "Content-Type": 'application/json',
+                },
+            })
+            let data = await response.json();
+            console.log("data:", data);
+            if (data == null) {
+                alert('Registration failed, user already exists or enter valid 10 digit mobile or valid email');
+                window.location.href = "signup.html";
+            } else {
+                alert('Registration Successful,Please login')
+                display();
+            }
+        } else {
+            alert('Registration failed, user already exists or enter valid 10 digit mobile or valid email')
+            window.location.href = "signup.html";
+        }
+    } catch (err) {
+        console.log("err:", err);
+    }

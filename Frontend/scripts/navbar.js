@@ -8,7 +8,7 @@ function navbar() {
                 <div><a href="index.html"><img id="logo" src="./img/Mainlogo.png" alt="Not found"></a></div>
                  <div>
                   <ul>
-                      <li><a href="sProductPage.html">Medicines</a></li>
+                      <li><a href="products.html">Medicines</a></li>
                       <li><a href="#">Lab Tests</a></li>
                       <li><a href="doctors.html">Consult Doctors</a></li>
                       <li><a href="#">COVID-19</a></li>
@@ -18,8 +18,8 @@ function navbar() {
                  </div>
               </div>
               <div class="inner2">
-                  <div>
-                      <p id="login_text_js"><a href="login.html" class="before_login_style">Login</a></p>
+                  <div id="beforelogin">
+                      <p id="login_text_js"><a id="logtext" href="login.html" class="before_login_style">Login</a></p>
                       <p id="login_text_js1">|</p>
                       <p id="login_text_js2"><a href="signup.html" class="before_login_style">Signup</a></p>
                       <P></P>
@@ -493,4 +493,5 @@ function navbar() {
       </section>
   </header>`;
 }
+
 export default navbar;
