@@ -87,9 +87,9 @@ function displaypro(arr) {
         let data_send = {
             name: ele.name,
             quantity: 1,
-            mrp: dprice,
+            mrp: ele.price,
             discount: 15,
-            price: ele.price,
+            price: dprice,
         };
 
         add_cart.onclick = () => {
@@ -98,9 +98,28 @@ function displaypro(arr) {
     });
 }
 function cartsend(data) {
-    var cart_arr = JSON.parse(localStorage.getItem("cart_data")) || [];
+    var cart_arr = JSON.parse(localStorage.getItem("cartArrayS1")) || [];
     cart_arr.push(data);
-    localStorage.setItem("cart_data", JSON.stringify(cart_arr));
-    alert('product added to cart successfully');
+    localStorage.setItem("cartArrayS1", JSON.stringify(cart_arr));
+    alert('product added to cart ');
+}
+const cartbtn = document.getElementById("red-cart")
+
+  cartbtn.addEventListener("click",()=>{
+  if(token){
+    window.location.href="cart.html"
+  }else{
+    alert("Please Login fisrt!")
+  }
+  })
+
+cartCount = document.getElementById("cartItembox");
+let cartarr =  JSON.parse(localStorage.getItem("cartArrayS1")) || null;
+
+if(cartarr){
+  cartCount.style.display="block"
+  cartCount.innerText=cartarr.length;
+}else{
+  cartCount.style.display="none"
 }
 

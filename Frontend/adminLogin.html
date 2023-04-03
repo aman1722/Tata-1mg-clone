@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login as Admin| wecare.com</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="stylesheet" href="./style/adminLogin.css" />
+  </head>
+  <body>
+    <div id="container">
+      <img
+        src="img/Mainlogo.png"
+        alt=""
+        onclick="window.location.href='index.html'"
+      />
+      <p id="error"></p>
+      <div id="top">
+        <p>Login as Admin</p>
+        <p>We will send a confirmation code to this email</p>
+        <form>
+          <input type="email" id="email" placeholder="Enter Email" />
+          <br />
+          <input type="password" id="pass" placeholder="Enter Password">
+          <br />
+          <input type="submit" value="NEXT" id="submit" />
+        </form>
+        <p>Don't have an account? <span id="login_span">Signup</span></p>
+      </div>
+      <p>
+        Problem in login? <span><a href="NeedHelp.html">Need Help</a></span>
+      </p>
+      <p>© 2022 1mg. All rights reserved.</p>
+    </div>
+  </body>
+</html>
+<script src="scripts/adminLogin.js"></script>

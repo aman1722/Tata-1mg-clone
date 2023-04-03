@@ -474,6 +474,7 @@ const jwttoken = localStorage.getItem("token")
 
         cartArrayS1.push(addedItemDetails);
         localStorage.setItem("cartArrayS1", JSON.stringify(cartArrayS1));
+        alert("Product Added to cart")
         location.reload();
     }
 
@@ -481,13 +482,13 @@ const jwttoken = localStorage.getItem("token")
 
     // function to pop the nubmer of items into the cart
     //# id = "cartItembox"  line 88
-    if (cartArrayS1.length == 0) {
-        (document.querySelector("#cartItembox")).style.display = "none";
-    }
-    else {
-        (document.querySelector("#cartItembox")).style.display = "block";
-        (document.querySelector("#cartItembox")).innerText = cartArrayS1.length;
-    }
+    // if (cartArrayS1.length == 0) {
+    //     (document.querySelector("#cartItembox")).style.display = "none";
+    // }
+    // else {
+    //     (document.querySelector("#cartItembox")).style.display = "block";
+    //     (document.querySelector("#cartItembox")).innerText = cartArrayS1.length;
+    // }
 
 
     //-------XXXXXXXXX------add to cart function
@@ -748,28 +749,14 @@ function paginationBtn(page) {
 
 
 async function fetchandrenderdata(page = 1) {
-    if(jwttoken){
-        const count = await fetch(`https://nice-cyan-pike-vest.cyclic.app/products/`,{
-            method:"GET",
-            headers:{
-                "Content-Type": "application/json",
-                 "Authorization": `${jwttoken}`
-            }
-        })
+    
+        const count = await fetch(`https://nice-cyan-pike-vest.cyclic.app/products/`)
         const procount = await count.json();
-        const res = await fetch(`https://nice-cyan-pike-vest.cyclic.app/products/?page=${page}&limit=16`,{
-            
-                method:"GET",
-                headers:{
-                    "Content-Type": "application/json",
-                     "Authorization": `${jwttoken}`
-                }
-            
-        })
+        const res = await fetch(`https://nice-cyan-pike-vest.cyclic.app/products/${page}`)
         // console.log(res.headers.get("x-Total-Count"))
         const totalItem = procount.length;
         console.log(totalItem)
-        const totalPages = Math.ceil(totalItem / 16);
+        const totalPages = Math.ceil(totalItem/16);
     
     
         const data = await res.json();
@@ -789,9 +776,27 @@ async function fetchandrenderdata(page = 1) {
             console.log("isko bhi dikkat h!")
             priceSorthtl(data);
         });
-    }else{
-        document.getElementById("sfinalcard1id").innerHTML = `<h1>Please login first</h1>` 
-    }
+   
+
+const cartbtn = document.getElementById("red-cart")
+
+  cartbtn.addEventListener("click",()=>{
+  if(token){
+    window.location.href="cart.html"
+  }else{
+    alert("Please Login fisrt!")
+  }
+  })
+
+cartCount = document.getElementById("cartItembox");
+let cartarr =  JSON.parse(localStorage.getItem("cartArrayS1")) || null;
+
+if(cartarr){
+  cartCount.style.display="block"
+  cartCount.innerText=cartarr.length;
+}else{
+  cartCount.style.display="none"
+}
  
 
 }

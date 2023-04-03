@@ -92,61 +92,12 @@ var swiper = new Swiper(".pop-Swiper", {
   },
 });
 
-// Name Section.....
 
-// let val = localStorage.getItem("mobile_number") || 2;
-
-// if (val.length >= 5) {
-//   document.getElementById("login_text_js").innerHTML = `<i class="fa-solid fa-user"></i>`;
-//   document.getElementById("login_text_js1").innerText = "My Profile";
-//   document.getElementById("login_text_js2").innerText = " ";
-//   document.getElementById("signup").innerHTML = `<b>PROFILE</b>`;
-
-//   document.getElementById("signup").addEventListener("click", function () {
-//     window.location.href = "index.html";
-//   });
-
-
-// }
-
-
-// let cartArrayS1 = JSON.parse(localStorage.getItem("cartArrayS1")) || [];
-
-// console.log(cartArrayS1.length);
-
-//   if(cartArrayS1.length == 0){
-//     (document.querySelector("#cartItembox")).style.display = "none";
-//   }
-//   else{
-//   (document.querySelector("#cartItembox")).style.display = "block";
-//   (document.querySelector("#cartItembox")).innerText = cartArrayS1.length;
-//   }
-
-//   document.getElementById("red-cart").addEventListener("click" , di);
-
-//   function di(){
-//     window.location.href = "cart.html";
-//   }
-
-// let appendSection = document.getElementById("fetch")
-const jwttoken = localStorage.getItem("token");
-const userinfo=JSON.parse(localStorage.getItem("userinfo"));
-// console.log(document.getElementById("logtext"))
-
-
-const div = document.getElementById("beforelogin")
-console.log(div)
 
 async function display() {
   try {
 
-    let res = await fetch("https://nice-cyan-pike-vest.cyclic.app/products/?page=1&limit=7",{
-      method:"GET",
-      headers:{
-          "Content-Type": "application/json",
-           "Authorization": `${jwttoken}`
-      }
-    })
+    let res = await fetch("https://nice-cyan-pike-vest.cyclic.app/products/?page=1&limit=7")
 
     let data = await res.json();
     console.log(data)
@@ -211,6 +162,23 @@ function showproduct(data) {
   localStorage.setItem('mg_base', JSON.stringify(data));
   window.location.href = "productPage.html"
 }
+const cartbtn = document.getElementById("red-cart")
 
+  cartbtn.addEventListener("click",()=>{
+  if(token){
+    window.location.href="cart.html"
+  }else{
+    alert("Please Login fisrt!")
+  }
+  })
 
+cartCount = document.getElementById("cartItembox");
+let cartarr =  JSON.parse(localStorage.getItem("cartArrayS1")) || null;
+
+if(cartarr){
+  cartCount.style.display="block"
+  cartCount.innerText=cartarr.length;
+}else{
+  cartCount.style.display="none"
+}
 

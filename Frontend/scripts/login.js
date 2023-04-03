@@ -266,3 +266,22 @@ document.getElementById("otp_call").addEventListener("click", function () {
     "You will soon receive an call with the OTP";
   document.getElementById("error").style.color = "green";
 });
+const cartbtn = document.getElementById("red-cart")
+
+  cartbtn.addEventListener("click",()=>{
+  if(token){
+    window.location.href="cart.html"
+  }else{
+    alert("Please Login fisrt!")
+  }
+  })
+
+cartCount = document.getElementById("cartItembox");
+let cartarr =  JSON.parse(localStorage.getItem("cartArrayS1")) || null;
+
+if(cartarr){
+  cartCount.style.display="block"
+  cartCount.innerText=cartarr.length;
+}else{
+  cartCount.style.display="none"
+}
